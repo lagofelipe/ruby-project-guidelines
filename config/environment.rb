@@ -1,4 +1,8 @@
+
+require 'open-uri'
+require 'net/http'
 require 'bundler'
+require 'json'
 Bundler.require
 
 
