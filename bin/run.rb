@@ -2,4 +2,4 @@ require_relative '../config/environment'
 
 
 
-puts "Welcome"
+puts "=========================================================================> Welcome, babe!"

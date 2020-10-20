@@ -1,5 +1,5 @@
 class Airport < ActiveRecord::Base
 has_many :trips
-has_many :airports, through: :trips
+has_many :frequentflyers, through: :trips
 
 end
