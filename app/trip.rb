@@ -1,5 +1,5 @@
 class Trip < ActiveRecord::Base
-    belongs_to :frequentFlyer 
+    belongs_to :frequent_flyer 
     belongs_to :airport
 
     

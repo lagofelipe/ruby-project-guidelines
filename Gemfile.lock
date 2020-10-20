@@ -47,6 +47,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   pry
   require_all
   sinatra-activerecord
