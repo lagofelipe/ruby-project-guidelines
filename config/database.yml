@@ -4,6 +4,6 @@ development:
   pool: 5
   timeout: 5000
 
-  airports_raw = File.read('config/airport_list.json')
+  # airports_raw = File.read('config/airport_list.json')
 
-  all_aiports = JSON.parse(airports_raw)
+  # all_aiports = JSON.parse(airports_raw)
