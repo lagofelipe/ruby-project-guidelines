@@ -1,5 +1,5 @@
 require_relative '../config/environment'
-require_relative '../config/airport_list.json'
+#require_relative '../config/airport_list.json'
 
 
   
@@ -7,14 +7,14 @@ require_relative '../config/airport_list.json'
 
 
 
-#welcome_screen
-#what_to_do
+welcome_screen
+helpmenu
 
 
 
 
 
-puts "Thank you for Flying Million-Air, keep climbing!"
+puts "Thank you for Flying Million-Air,   ===================== >> Keep Climbing!"
 
 # binding.pry
 
