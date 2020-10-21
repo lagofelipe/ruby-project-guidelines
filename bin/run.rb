@@ -8,13 +8,15 @@ require_relative '../config/environment'
 
 
 welcome_screen
-#help_menu
+main_menu
+
+#finder_by_iata
 
 
 
 
 
-puts "Thank you for Flying Million-Air,   ===================== >> Keep Climbing!"
+puts "Thank you for Flying Million-Air,   =====================run.rb=== >> Keep Climbing!"
 
 # binding.pry
 
