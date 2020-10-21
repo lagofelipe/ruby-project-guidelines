@@ -18,15 +18,15 @@ def main_menu
   main = $prompt.select "Airport finder by City, Airport finder by IATA, or current Fequent Flyer Medallion Status?", %w(city iata medallion)
 
    if  main == "city" 
-          finder_by_city
+          Airport.finder_by_city
 
           #puts menu.choice
    elsif main == "iata"
-        finder_by_iata
+        Airport.finder_by_iata
 
         #puts menu.choice
    else main == "medallion"
-        medallion_menu
+    FrequentFlyer.medallion_menu
     end
   end
 

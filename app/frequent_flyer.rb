@@ -5,8 +5,8 @@ class FrequentFlyer < ActiveRecord::Base
 
 
 
-#     def medallion_menu
-#         p "medallion_menu test test from FREQUENT FLYER CLASSAUS"
-#     end
+    def self.medallion_menu
+        p "medallion_menu test test from FREQUENT FLYER CLASSAUS"
+    end
 
-end
+ end
