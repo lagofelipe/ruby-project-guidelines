@@ -8,7 +8,7 @@ require_relative '../config/environment'
 
 
 welcome_screen
-helpmenu
+#help_menu
 
 
 
