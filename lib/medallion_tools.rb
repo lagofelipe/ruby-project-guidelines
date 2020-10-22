@@ -1,3 +1,3 @@
-def medallion_menu
-    p "medallion_menu test test from AIRPORT TOOLS"
-end
+# def medallion_menu
+#     p "medallion_menu test test from AIRPORT TOOLS"
+# end

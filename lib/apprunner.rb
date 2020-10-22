@@ -7,15 +7,15 @@ prompt = TTY::Prompt.new
 def welcome_screen
   system "clear"
   puts $pastel1.blue($font.write("Million - Air  Inc ."))
-  p "Welcome on board, and Thank you for flying Million-Air!"
+  p "Welcome to Million-Air's Gate Agent System"
 end
   
 
 def main_menu
-    system "clear"
+    #system "clear"
 
 
-  main = $prompt.select "Airport finder by City, Airport finder by IATA, or current Fequent Flyer Medallion Status?", %w(city iata medallion)
+  main = $prompt.select "Please make your selection bellow", %w(city iata medallion)
 
    if  main == "city" 
           Airport.finder_by_city
