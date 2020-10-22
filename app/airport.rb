@@ -5,34 +5,49 @@ has_many :frequent_flyers, through: :trips
 
 def self.finder_by_city
     system "clear"
-  p "Airport locator by city"
+  p "Airport locator by city - For non-IATA and Partner FBOs"
     
-  city_input = $prompt.ask("Please enter the city you wish to search for")
+  city_input = $prompt.ask("Agent Warning: Please only use this criteria for ON-FBOs and non-IATA stations -Please enter the city you wish to search for")
   self.finder_by_city_helper(city_input)
   
 end
     
-
 def self.finder_by_city_helper(city_input)
-    target = self.all.each do |target, city|
-       if target[:city] == city_input
-        puts target
-       else
-        puts "Airport === Does====NOT=====EXIST"
-       end
-    end
+    system "clear"
+    values = Airport.find_by city: city_input
+    puts ""
+    puts "==== Agent: Your results are the following: ========" 
+    puts "Airport Name: #{values.name} // IATA code: #{values.iata} // City: #{values.city} // Country: #{values.country} "
+    puts ""
+    puts "No other Airports in Registry matching search criteria"
 end
 
-
-
-
-
-   def self.finder_by_iata
-        p "test finder_by_iata from app folder AIRPORT CLASS APP FOLDER"
+ def self.finder_by_iata
+    system "clear"
+    p "Airport locator by IATA code - Please use for all Network Stations and Assets"
+      
+    iata_input = $prompt.ask("Please enter the Station IATA you wish to search for")
+    self.finder_by_iata_helper(iata_input)
     end
+
+   def self.finder_by_iata_helper(iata_input)
+    system "clear"
+    station = Airport.find_by iata: iata_input
+    puts ""
+    puts "==== Agent: Your results are the following: ========" 
+    puts "Airport Name: #{station.name} // IATA code: #{station.iata} // City: #{station.city} // Country: #{station.country} "
+    puts ""
+    puts "No other Company Stations in Registry matching search criteria"
+
+   end
+
+
+
+
 
 # def self.all
 # Airport.all
 # end
 
-end
+######
+end###
