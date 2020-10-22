@@ -29,22 +29,27 @@ class FrequentFlyer < ActiveRecord::Base
 
         def self.medallion_by_city_helper(station_input)
             system "clear"
-            target = FrequentFlyer.all.select {|ff|ff.home_airport == station_input}
-           
+            
+            target = FrequentFlyer.where(home_airport: station_input)
+            name_out = target.each {|flyer|puts flyer}
+            #home_airport_out = target.each {|flyer|flyer.home_airport}
+            #medallion_out = target.each {|flyer|flyer.medallion}
+            
             puts ""
             puts "==== Agent: Your results are the following: ========" 
-            puts target
-            #binding.pry
-      #puts "Airport Name: #{values.name} // IATA code: #{values.iata} // City: #{values.city} // Country: #{values.country} "
             puts ""
-            puts "No other Airports in Registry matching search criteria"
+            puts "Medallion Holder Information: #{name_out}"
+            puts ""
+            puts "No other Medallion holders assigned to Station or FBO load"
         end
-
+        
 
 
        def self.finder_by_iata
            system "clear"
-
+           p "Medallion Search By Station"
+           station_input = $prompt.ask("Agent Warning: Please enter the Station you wish to view current Medallion Load")
+           self.medallion_by_city_helper(station_input)
        end
 
        def self.medallion_search
