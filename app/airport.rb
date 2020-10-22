@@ -9,13 +9,17 @@ def self.finder_by_city
     
   city_input = $prompt.ask("Please enter the city you wish to search for")
   self.finder_by_city_helper(city_input)
+  
 end
     
 
 def self.finder_by_city_helper(city_input)
-    target = Airport.all["city"].find do |result|
-        result["city"] == city_input
-        binding.pry
+    target = self.all.each do |target, city|
+       if target[:city] == city_input
+        puts target
+       else
+        puts "Airport === Does====NOT=====EXIST"
+       end
     end
 end
 

@@ -16,7 +16,7 @@ main_menu
 
 
 
-puts "Thank you for Flying Million-Air,   =====================run.rb=== >> Keep Climbing!"
+puts "Thank you for Hard Work & Dedication! 2020 Flying Million-Air Inc All rights reserved,   =====================run.rb=== >> Keep Climbing!"
 
 # binding.pry
 
