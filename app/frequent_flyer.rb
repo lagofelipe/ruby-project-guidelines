@@ -3,10 +3,8 @@ class FrequentFlyer < ActiveRecord::Base
     has_many :airports, through: :trips
     
 
-
-
-    def self.medallion_menu
-        p "medallion_menu test test from FREQUENT FLYER CLASSAUS"
+      def self.medallion_menu
+        p "Medallion menu - Agent: Please select the following options"
     end
 
  end

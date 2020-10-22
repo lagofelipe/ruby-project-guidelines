@@ -13,9 +13,7 @@ end
 
 def main_menu
     #system "clear"
-
-
-  main = $prompt.select "Please make your selection bellow", %w(city iata medallion)
+main = $prompt.select "Please make your selection bellow", %w(city iata medallion)
 
    if  main == "city" 
           Airport.finder_by_city
