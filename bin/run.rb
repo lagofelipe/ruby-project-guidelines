@@ -16,8 +16,12 @@ main_menu
 
 
 
+
 puts "Thank you for Hard Work & Dedication! 2020 Flying Million-Air Inc All rights reserved,   =====================run.rb=== >> Keep Climbing!"
 
+#system "clear"
+#welcome_screen
+#main_menu
 # binding.pry
 
 # puts "=========================================================================> Welcome, babe!"
