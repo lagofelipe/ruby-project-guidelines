@@ -7,7 +7,7 @@ prompt = TTY::Prompt.new
 def welcome_screen
   system "clear"
   puts $pastel1.blue($font.write("Million - Air  Inc ."))
-  puts $pastel1.green("Welcome to Million-Air Inc Gate Management System - Version 1.1.6 - 2020 Dunder Mifflin Labs ")
+  puts $pastel1.green("Welcome to Million-Air Management System - MAMS - Version 1.0 - 2020 - All rights reserved. ")
 end
   
 
