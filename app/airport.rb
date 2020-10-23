@@ -5,9 +5,9 @@ has_many :frequent_flyers, through: :trips
 
 def self.finder_by_city
     system "clear"
-  p "Airport locator by city - For non-IATA and Partner FBOs"
-    
-  city_input = $prompt.ask("Agent Warning: Please only use this criteria for ON-FBOs and non-IATA stations -Please enter the city you wish to search for")
+  puts $pastel1.yellow("Airport locator by city - For non-IATA and Partner FBOs")
+  puts $pastel1.red( "Agent Warning: Please only use this criteria for Million-Air Partner-FBOs and non-IATA stations")
+  city_input = $prompt.ask("Please enter the city you wish to search for")
   self.finder_by_city_helper(city_input)
   
 end
@@ -16,15 +16,16 @@ def self.finder_by_city_helper(city_input)
     system "clear"
     values = Airport.find_by city: city_input
     puts ""
-    puts "==== Agent: Your results are the following: ========" 
-    puts "Airport Name: #{values.name} // IATA code: #{values.iata} // City: #{values.city} // Country: #{values.country} "
+    puts $pastel1.red("==== Agent: Your results are the following: ========") 
+    puts $pastel1.green("Airport Name: #{values.name} // IATA code: #{values.iata} // City: #{values.city} // Country: #{values.country} ")
     puts ""
-    puts "No other Airports in Registry matching search criteria"
+    puts $pastel1.red("No other Airports in Registry matching search criteria")
+    main_menu
 end
 
  def self.finder_by_iata
     system "clear"
-    p "Airport locator by IATA code - Please use for all Network Stations and Assets"
+    puts $pastel1.yellow("Airport locator by IATA code - Please use for all Network Stations and Assets")
       
     iata_input = $prompt.ask("Please enter the Station IATA you wish to search for")
     self.finder_by_iata_helper(iata_input)
@@ -34,11 +35,11 @@ end
     system "clear"
     station = Airport.find_by iata: iata_input
     puts ""
-    puts "==== Agent: Your results are the following: ========" 
-    puts "Airport Name: #{station.name} // IATA code: #{station.iata} // City: #{station.city} // Country: #{station.country} "
+    puts $pastel1.red("==== Agent: Your results are the following: ========") 
+    puts $pastel1.green("Airport Name: #{station.name} // IATA code: #{station.iata} // City: #{station.city} // Country: #{station.country} ")
     puts ""
-    puts "No other Company Stations in Registry matching search criteria"
-
+    puts $pastel1.red("==== No other Company Stations in Registry matching search criteria =====")
+    main_menu
    end
 
 

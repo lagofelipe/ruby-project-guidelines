@@ -1,4 +1,4 @@
-$prompt = TTY::Prompt.new(active_color: :red)
+$prompt = TTY::Prompt.new(active_color: :yellow)
 $font = TTY::Font.new(:doom)
 $pastel1 = Pastel.new
 prompt = TTY::Prompt.new
@@ -7,13 +7,13 @@ prompt = TTY::Prompt.new
 def welcome_screen
   system "clear"
   puts $pastel1.blue($font.write("Million - Air  Inc ."))
-  p "Welcome to Million-Air's Gate Agent System"
+  puts $pastel1.green("Welcome to Million-Air Inc Gate Management System - Version 1.1.6 - 2020 Dunder Mifflin Labs ")
 end
   
 
 def main_menu
     #system "clear"
-main = $prompt.select "Please enter your search criteria bellow", %w(city iata medallion)
+main = $prompt.select "Please enter your search selection bellow", %w(city iata medallion)
 
    if  main == "city" 
           Airport.finder_by_city
